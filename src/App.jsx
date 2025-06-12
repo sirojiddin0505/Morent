@@ -1,33 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Header from './components/header/Header'
+import Layout from './components/layout/Layout'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const data = [
+    {
+      id:1,
+      title: "Koenigsegg",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "90l",
+      price: "$99/day"
+    },
+    {
+      id:2,
+      title: "Nissan GT-R",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "80l",
+      price: "$80/day"
+    },
+    {
+      id:3,
+      title: "Rolls-Royce",
+      type: "Sedan",
+      img: "",
+      capacity: 4,
+      fuel: "70l",
+      price: "$96/day"
+    },
+    {
+      id:4,
+      title: "All New Rush",
+      type: "Suv",
+      img: "",
+      capacity: 6,
+      fuel: "70l",
+      price: "$72/day"
+    },
+    {
+      id:5,
+      title: "Koenigsegg",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "90l",
+      price: "$99/day"
+    },
+    {
+      id:6,
+      title: "Koenigsegg",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "90l",
+      price: "$99/day"
+    },
+    {
+      id:7,
+      title: "Koenigsegg",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "90l",
+      price: "$99/day"
+    },
+    {
+      id:8,
+      title: "Koenigsegg",
+      type: "Sport",
+      img: "",
+      capacity: 2,
+      fuel: "90l",
+      price: "$99/day"
+    },
+  ]
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Header/>
+    <Layout/>
     </>
   )
 }
