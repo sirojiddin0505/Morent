@@ -7,8 +7,6 @@ import { IoPeopleSharp } from "react-icons/io5";
 import car_img from '../../assets/Car.svg'
 
 
-
-
 const Home = () => {
   const carData = [
     {
