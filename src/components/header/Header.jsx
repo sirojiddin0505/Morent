@@ -4,7 +4,6 @@ import { IoIosNotifications, IoIosSettings } from "react-icons/io";
 import person_img from "../../assets/person_img.jpg"
 
 
-
 const Header = () => {
   return (
     <section>
