@@ -2,7 +2,11 @@ import React from 'react'
 import car1 from '../../assets/car1.png'
 import car2 from '../../assets/car2.png'
 import { usefavoriteStore } from '../../favourites';
-import { FaRegHeart } from "react-icons/fa";
+import { BsFillFuelPumpFill } from "react-icons/bs";
+import { IoPeopleSharp } from "react-icons/io5";
+import car_img from '../../assets/Car.svg'
+
+
 
 
 const Home = () => {
@@ -11,12 +15,11 @@ const Home = () => {
       id: 1,
       name: "Koenigsegg",
       category: "Sport",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNJPchY5YZoiZnLZTOKcckpFy37P9ig22YCA&s",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2Eob8N0DePS1C2ktk36iDDUDCOy6BTjBMA&s",
       transmission: "Manual",
       fuel:"80l",
       people: "2 People",
-      price: "$99.00/day",
-      isLiked: false,
+      price: "$96",
       onRent: "Rent Now",
     },
     {
@@ -27,8 +30,7 @@ const Home = () => {
       fuel: "80L",
       transmission: "Manual",
       people: "2 People",
-      price: "$100.00/day",
-      isLiked: false,
+      price: "$100",
       onRent: "Rent Now",
     },
     {
@@ -39,8 +41,7 @@ const Home = () => {
       fuel: "70L",
       transmission: "Manual",
       people: "4 People",
-      price: "$96.00/day",
-      isLiked: false,
+      price: "$96",
       onRent: "Rent Now",
     },
     {
@@ -51,103 +52,103 @@ const Home = () => {
       fuel: "80L",
       transmission: "Manual",
       people: "2 People",
-      price: "$100.00/day",
-      isLiked: false,
+      price: "$100",
       onRent: "Rent Now",
     },
     {
       id:5,
-      name:"Rolls-Royce",
+      name:"All New Terios",
       category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHehE-XLInmJpzJp-9KTD3QCgCI8GzXfIe6w&s",
+      fuel:"90l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$74"
     },
     {
       id:6,
-      name:"Rolls-Royce",
+      name:"CR  - V",
       category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNVrGXFWfzp9v4LGKiZobl3JZVdmarnot_8Qx_59-Ili9dEk56Y6OtShADFgjT0UtqonU&usqp=CAU",
+      fuel:"80l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$80"
     },
     {
       id:7,
-      name:"Rolls-Royce",
+      name:"All New Terios",
       category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      image:"https://imgcdn.zigwheels.lk/medium/gallery/color/5/33/daihatsu_terios_sky-blue.jpg",
+      fuel:"90l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$74"
     },
     {
       id:8,
-      name:"Rolls-Royce",
+      name:"CR  - V",
       category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      image:"https://honda-kl.com/images/cr-v/honda-crv-lunar-silver-metallic.png",
+      fuel:"80l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$80"
     },
     {
       id:9,
-      name:"Rolls-Royce",
-      category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
+      name:"MG ZX Exclusice",
+      category:"Hatchback",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5GK0raK7Qv1oIFUnl1FSvQrd6lHeOXCadg&s",
       fuel:"70l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$76"
     },
     {
       id:10,
-      name:"Rolls-Royce",
-      category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      name:"New MG ZS",
+      category:"Suv",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKiU-3fum-058nw0Yv6kfN808-3721ZFT2mg&s",
+      fuel:"80l",
       transmission:"Manual",
-      people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      people:"6 people",
+      price:"$80"
     },
     {
       id:11,
-      name:"Rolls-Royce",
-      category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      name:"MG ZX Excite",
+      category:"Hetchback",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRTANFvOy_a9YQMXA-yEEVle3pL5chnKT6g&s",
+      fuel:"90l",
       transmission:"Manual",
       people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      price:"$74"
     },
     {
       id:12,
-      name:"Rolls-Royce",
-      category:"Sedan",
-      image:"https://cdn.dealeraccelerate.com/bagauction/15/2707/118616/1920x1440/2021-nissan-gt-r-nismo",
-      fuel:"70l",
+      name:"New MG ZS",
+      category:"Suv",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKiU-3fum-058nw0Yv6kfN808-3721ZFT2mg&s",
+      fuel:"80l",
       transmission:"Manual",
-      people:"4 people",
-      price:"$96/day",
-      isLiked:false,
+      people:"6 people",
+      price:"$80"
     },
   ];
-  const {addFavorites} = usefavoriteStore()
+  const {addFavorites, removeFavorites, isFavorite} = usefavoriteStore()
+  const toggleFavorite = (car) => {
+    console.log(car.id);
+    
+    if (isFavorite(car.id)) {
+      removeFavorites(car.id);
+    } else {
+      addFavorites(car);
+    }
+  }
   return (
     <section className="container mx-auto bg-white/50 py-4">
-      <div className='flex gap-4 justify-between items-center'>
+      <div className='flex flex-wrap gap-4 justify-center items-center lg:grid lg:grid-cols-2 lg:justify-between'>
         <div className='bg-[#54A6FF] w-[600px] rounded-[10px] p-6 pb-18 relative'>
           <h1 className='text-[#FFFFFF] text-[32px] max-w-[270px]'>The Best Platform for Car Rental</h1>
           <p className='text-[#FFFFFF] text-[] max-w-[270px] py-4'>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
@@ -161,24 +162,26 @@ const Home = () => {
           <img src={car2} alt="" className="absolute -bottom-14 right-12 w-90 rotate-[1.5deg]" />
         </div>
       </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-      {carData && carData.map(car=>(
-      <div className="bg-white border border-gray-500 rounded-lg shadow py-4 px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+      {carData && carData.map(car => (
+      <div className="bg-[#ffff] rounded-lg shadow py-4 px-4">
         <div className='flex justify-between'>
           <span>
             <h2 className="text-lg font-bold">{car.name}</h2>
             <p className="text-sm text-gray-500 py-1">{car.category}</p>
           </span>
-          <button className='text-[24px] cursor-pointer active:scale-85 duration-475' onClick={()=> addFavorites(car)} ><FaRegHeart/></button>
+          <button onClick={()=>toggleFavorite(car)}>
+          {isFavorite(car.id) ? "❤️" : "🤍"}
+          </button>
         </div>
          <img src={car.image} alt="Koenigsegg" className="w-full h-40 object-cover rounded"/>
-        <div className="flex justify-around text-gray-600 py-3">
-          <span className='font-semibold text-gray-600'>{car.fuel}</span>
-          <span className='font-semibold text-gray-600'>{car.transmission}</span>
-          <span className='font-semibold text-gray-600'>{car.people}</span>
+        <div className="flex justify-between text-gray-600 py-3">
+          <span className='font-semibold text-gray-600 flex items-center gap-1'><BsFillFuelPumpFill/> {car.fuel}</span>
+          <span className='font-semibold text-gray-600 flex items-center gap-1'><img src={car_img} alt="" />{car.transmission}</span>
+          <span className='font-semibold text-gray-600 flex items-center gap-1'><IoPeopleSharp/>{car.people}</span>
         </div>
         <div className="flex justify-between items-center mt-4">
-          <p className="text-blue-600 font-semibold">{car.price}</p>
+          <p className="font-[700] flex gap-1">{car.price}<p className='text-gray-700'>/day</p></p>
           <button className="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-800">Rent Now</button>
         </div>
        </div>
