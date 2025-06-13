@@ -1,5 +1,6 @@
 import React from 'react'
 import { usefavoriteStore } from '../favourites'
+import { IoIosHeart } from "react-icons/io";
 
 const Favorites = () => {
   const {favorite, removeFavorites} = usefavoriteStore()
@@ -7,7 +8,7 @@ const Favorites = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
    {favorite && favorite.map(car=>(
     <div className="bg-white border rounded-lg shadow p-4">
-      <button className='bg-red-800' onClick={()=> removeFavorites(car.id)}><FaRegHeart/></button>
+      <button className='text-red-500' onClick={()=> removeFavorites(id)}><IoIosHeart/></button>
     <img
       src={car.image}
       alt="img"
