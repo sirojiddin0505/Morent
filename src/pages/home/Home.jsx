@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import car1 from '../../assets/car1.png'
 import car2 from '../../assets/car2.png'
 import { usefavoriteStore } from '../../favourites';
@@ -135,9 +135,7 @@ const Home = () => {
     },
   ];
   const {addFavorites, removeFavorites, isFavorite} = usefavoriteStore()
-  const toggleFavorite = (car) => {
-    console.log(car.id);
-    
+  const toggleFavorite = (car) => {    
     if (isFavorite(car.id)) {
       removeFavorites(car.id);
     } else {
