@@ -4,6 +4,8 @@ import { persist } from "zustand/middleware";
 export const usefavoriteStore = create(
     persist(
         (set, get) => ({
+            search: "",
+            handleSearch:(item) => set((state) => ({search:item})) ,
             favorite: [],
             addFavorites: (car) => set((state) => ({favorite:[...state.favorite, car]})),
             removeFavorites:(id) => set((state) => ({favorite:state.favorite.filter(item => item.id !== id)})),

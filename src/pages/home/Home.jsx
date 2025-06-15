@@ -4,6 +4,7 @@ import car2 from '../../assets/car2.png'
 import { usefavoriteStore } from '../../favourites';
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { IoPeopleSharp } from "react-icons/io5";
+import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 import car_img from '../../assets/Car.svg'
 
 
@@ -13,7 +14,7 @@ const Home = () => {
       id: 1,
       name: "Koenigsegg",
       category: "Sport",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2Eob8N0DePS1C2ktk36iDDUDCOy6BTjBMA&s",
+      image:'../../assets/car1.png',
       transmission: "Manual",
       fuel:"80l",
       people: "2 People",
@@ -142,6 +143,8 @@ const Home = () => {
       addFavorites(car);
     }
   }
+  const {search} = usefavoriteStore()
+  const searchCard = carData.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()))
   return (
     <section className="container mx-auto bg-white/50 py-4">
       <div className='flex flex-wrap gap-4 justify-center items-center lg:grid lg:grid-cols-2 lg:justify-between'>
@@ -158,22 +161,22 @@ const Home = () => {
           <img src={car2} alt="" className="absolute -bottom-14 right-12 w-90 rotate-[1.5deg]" />
         </div>
       </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
-      {carData && carData.map(car => (
-      <div className="bg-[#ffff] rounded-lg shadow py-4 px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 pt-16">
+      {searchCard && searchCard.map(car => (
+      <div className="bg-[#ffff] rounded-lg shadow py-4 px-4 border border-gray-500">
         <div className='flex justify-between'>
           <span>
             <h2 className="text-lg font-bold">{car.name}</h2>
             <p className="text-sm text-gray-500 py-1">{car.category}</p>
           </span>
-          <button onClick={()=>toggleFavorite(car)}>
-          {isFavorite(car.id) ? "❤️" : "🤍"}
+          <button onClick={()=>toggleFavorite(car)} className='mb-3'>
+          {isFavorite(car.id) ? <IoIosHeart className='text-red-500 text-[28px] font-bold cursor-pointer'/> : <IoIosHeartEmpty className='text-[28px] font-bold cursor-pointer'/>}
           </button>
         </div>
-         <img src={car.image} alt="Koenigsegg" className="w-full h-40 object-cover rounded"/>
-        <div className="flex justify-between text-gray-600 py-3">
-          <span className='font-semibold text-gray-600 flex items-center gap-1'><BsFillFuelPumpFill/> {car.fuel}</span>
-          <span className='font-semibold text-gray-600 flex items-center gap-1'><img src={car_img} alt="" />{car.transmission}</span>
+         <img src={car.image} alt={car.name} className="max-w-[100%] h-40 object-cover my-6 rounded"/>
+        <div className="flex justify-around md:grid md:grid-cols-2 xl:grid-cols-3 text-gray-600 ">
+          <span className='font-semibold text-gray-600 flex items-center gap-1'><BsFillFuelPumpFill/>{car.fuel}</span>
+          <span className='font-semibold text-gray-600 flex items-center gap-1 xl:mr-6'><img src={car_img} alt="" />{car.transmission}</span>
           <span className='font-semibold text-gray-600 flex items-center gap-1'><IoPeopleSharp/>{car.people}</span>
         </div>
         <div className="flex justify-between items-center mt-4">
