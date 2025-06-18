@@ -6,6 +6,18 @@ import { BsFillFuelPumpFill } from "react-icons/bs";
 import { IoPeopleSharp } from "react-icons/io5";
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 import car_img from '../../assets/Car.svg'
+import car_1 from '../../assets/car-1.png'
+import car_3 from '../../assets/car-3.png'
+import car_2 from '../../assets/car-2.png'
+import car_4 from '../../assets/car-4.png'
+import car_5 from '../../assets/car-5.png'
+import car_6 from '../../assets/car-6.png'
+import car_7 from '../../assets/car-7.png'
+import car_8 from '../../assets/car-8.png'
+import car_9 from '../../assets/car-9.png'
+import car_10 from '../../assets/car-10.png'
+import car_11 from '../../assets/car-11.png'
+import car_12 from '../../assets/car-12.png'
 
 
 const Home = () => {
@@ -14,7 +26,7 @@ const Home = () => {
       id: 1,
       name: "Koenigsegg",
       category: "Sport",
-      image:'../../assets/car1.png',
+      image:car_1,
       transmission: "Manual",
       fuel:"80l",
       people: "2 People",
@@ -25,7 +37,7 @@ const Home = () => {
       id: 2,
       name: "Nissan GT-R",
       category: "Sport",
-      image:"https://www.nissan.com.cy/content/dam/Nissan/nissan_europe/experience_nissan/performance/18tdieu-helios317.jpg",
+      image:car_2,      
       fuel: "80L",
       transmission: "Manual",
       people: "2 People",
@@ -36,7 +48,7 @@ const Home = () => {
       id: 3,
       name: "Rolls-Royce",
       category: "Sedan",
-      image:"https://moscowteslaclub.ru/upload/iblock/898/takkotjd10qxf5knu8is7wyvbibssmni.jpg",
+      image:car_3,
       fuel: "70L",
       transmission: "Manual",
       people: "4 People",
@@ -47,7 +59,7 @@ const Home = () => {
       id: 4,
       name: "Nissan GT-R",
       category: "Sport",
-      image:"https://modelistam.com.ua/images/tamiya_24210_3.jpg",
+      image:car_4,
       fuel: "80L",
       transmission: "Manual",
       people: "2 People",
@@ -58,7 +70,7 @@ const Home = () => {
       id:5,
       name:"All New Terios",
       category:"Sedan",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHehE-XLInmJpzJp-9KTD3QCgCI8GzXfIe6w&s",
+      image:car_5,
       fuel:"90l",
       transmission:"Manual",
       people:"4 people",
@@ -68,7 +80,7 @@ const Home = () => {
       id:6,
       name:"CR  - V",
       category:"Sedan",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNVrGXFWfzp9v4LGKiZobl3JZVdmarnot_8Qx_59-Ili9dEk56Y6OtShADFgjT0UtqonU&usqp=CAU",
+      image:car_6,
       fuel:"80l",
       transmission:"Manual",
       people:"4 people",
@@ -78,7 +90,7 @@ const Home = () => {
       id:7,
       name:"All New Terios",
       category:"Sedan",
-      image:"https://imgcdn.zigwheels.lk/medium/gallery/color/5/33/daihatsu_terios_sky-blue.jpg",
+      image:car_7,
       fuel:"90l",
       transmission:"Manual",
       people:"4 people",
@@ -88,7 +100,7 @@ const Home = () => {
       id:8,
       name:"CR  - V",
       category:"Sedan",
-      image:"https://honda-kl.com/images/cr-v/honda-crv-lunar-silver-metallic.png",
+      image:car_8,
       fuel:"80l",
       transmission:"Manual",
       people:"4 people",
@@ -98,7 +110,7 @@ const Home = () => {
       id:9,
       name:"MG ZX Exclusice",
       category:"Hatchback",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5GK0raK7Qv1oIFUnl1FSvQrd6lHeOXCadg&s",
+      image:car_9,
       fuel:"70l",
       transmission:"Manual",
       people:"4 people",
@@ -108,7 +120,7 @@ const Home = () => {
       id:10,
       name:"New MG ZS",
       category:"Suv",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKiU-3fum-058nw0Yv6kfN808-3721ZFT2mg&s",
+      image:car_10,
       fuel:"80l",
       transmission:"Manual",
       people:"6 people",
@@ -118,7 +130,7 @@ const Home = () => {
       id:11,
       name:"MG ZX Excite",
       category:"Hetchback",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRTANFvOy_a9YQMXA-yEEVle3pL5chnKT6g&s",
+      image:car_11,
       fuel:"90l",
       transmission:"Manual",
       people:"4 people",
@@ -128,7 +140,7 @@ const Home = () => {
       id:12,
       name:"New MG ZS",
       category:"Suv",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKiU-3fum-058nw0Yv6kfN808-3721ZFT2mg&s",
+      image:car_12,
       fuel:"80l",
       transmission:"Manual",
       people:"6 people",
@@ -146,19 +158,19 @@ const Home = () => {
   const {search} = usefavoriteStore()
   const searchCard = carData.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()))
   return (
-    <section className="container mx-auto bg-white/50 py-4">
-      <div className='flex flex-wrap gap-4 justify-center items-center lg:grid lg:grid-cols-2 lg:justify-between'>
-        <div className='bg-[#54A6FF] w-[600px] rounded-[10px] p-6 pb-18 relative'>
-          <h1 className='text-[#FFFFFF] text-[32px] max-w-[270px]'>The Best Platform for Car Rental</h1>
-          <p className='text-[#FFFFFF] text-[] max-w-[270px] py-4'>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
-          <button className='bg-[#3563E9] text-[#ffff] hover:bg-blue-700 py-2 px-5 rounded-md mb-2'>Rental Car</button>
-          <img src={car1} alt="" className="absolute -bottom-6 w-108 right-12 rotate-[1.5deg]"/>
+    <section className="container mx-auto bg-white/50 py-4 pt-20">
+      <div className='flex flex-col gap-4 justify-between items-center lg:grid lg:grid-cols-2 place-items-center-safe'>
+        <div className='bg-[#54A6FF] max-w-[630px] rounded-[10px] p-6'>
+          <h1 className='text-[#FFFFFF] text-center mx-auto text-[32px] font-[600] md:text-left md:mx-0 md:max-w-[270px]'>The Best Platform for Car Rental</h1>
+          <p className='text-[#FFFFFF] text-center md:text-left mx-10 md:mx-0 md:max-w-[270px] py-4'>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+          <button className='bg-[#3563E9] text-[#ffff] text-center mx-auto flex py-3 px-25 my-4 rounded-full hover:bg-blue-700 cursor-pointer md:text-start md:mx-0 md:py-2 md:px-5 md:rounded-md'>Rental Car</button>
+          <img src={car1} alt="" className="text-center mx-auto py-4 mr-4 w-[320px] md:w-[400px] md:ml-34"/>
         </div>
-        <div className='bg-[#3563E9] w-[600px] rounded-[10px] p-6 pb-18 relative'>
-          <h1 className='text-[#FFFFFF] text-[32px] max-w-[270px]'>Easy way to rent a car at a low price</h1>
-          <p className='text-[#FFFFFF] text-[] max-w-[270px] py-4'>Providing cheap car rental services and safe and comfortable facilities.</p>
-          <button className='bg-[#54A6FF] text-[#ffff] hover:bg-blue-800 py-2 px-5 rounded-md mb-2'>Rental Car</button>
-          <img src={car2} alt="" className="absolute -bottom-14 right-12 w-90 rotate-[1.5deg]" />
+        <div className='bg-[#54A6FF] max-w-[630px] rounded-[10px] p-6'>
+          <h1 className='text-[#FFFFFF] text-center mx-auto text-[32px] font-[600] md:text-left md:mx-0 md:max-w-[270px]'>Easy way to rent a car at a low price</h1>
+          <p className='text-[#FFFFFF] text-center md:text-left mx-10 md:mx-0 md:max-w-[270px] py-4'>Providing cheap car rental services and safe and comfortable facilities.</p>
+          <button className='bg-[#4191e7] text-[#ffff] text-center mx-auto flex py-3 px-25 my-4 rounded-full hover:bg-blue-800 cursor-pointer md:text-start md:mx-0 md:py-2 md:px-5 md:rounded-md'>Rental Car</button>
+          <img src={car2} alt="" className="text-center mx-auto mr-4 py-1 w-[320px] md:w-[400px] md:ml-34" />
         </div>
       </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 pt-16">
@@ -173,7 +185,7 @@ const Home = () => {
           {isFavorite(car.id) ? <IoIosHeart className='text-red-500 text-[28px] font-bold cursor-pointer'/> : <IoIosHeartEmpty className='text-[28px] font-bold cursor-pointer'/>}
           </button>
         </div>
-         <img src={car.image} alt={car.name} className="max-w-[100%] h-40 object-cover my-6 rounded"/>
+         <div><img src={car.image} alt={car.name} className="w-full h-50 object-contain my-4 rounded"/></div> 
         <div className="flex justify-around md:grid md:grid-cols-2 xl:grid-cols-3 text-gray-600 ">
           <span className='font-semibold text-gray-600 flex items-center gap-1'><BsFillFuelPumpFill/>{car.fuel}</span>
           <span className='font-semibold text-gray-600 flex items-center gap-1 xl:mr-6'><img src={car_img} alt="" />{car.transmission}</span>

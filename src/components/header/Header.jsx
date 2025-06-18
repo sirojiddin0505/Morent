@@ -14,8 +14,8 @@ const Header = () => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <section>
-      <div className="container mx-auto flex justify-between items-center py-2 px-6 gap-4 bg-white/100">
+    <section className='bg-gray-200 fixed top-0 left-0 right-0'>
+      <div className="container mx-auto flex justify-between items-center py-2 px-6 gap-4">
         <div className='flex gap-4 lg:gap-20 items-center'>
           <h1 className='text-blue-700 text-[24px] md:text-[32px] font-[700]'>MORENT</h1>
           <div className='hidden md:w-[350px] lg:w-[410px] sm:flex items-center py-1.5 border-gray-500 px-4 gap-2 border rounded-full'><FaSearch className='text-gray-500 text-[20px]'/><input type="text" className='w-full text-gray-800 outline-none' placeholder='Search' onChange={(e)=> handleSearch(e?.target.value)}/></div>
@@ -35,7 +35,7 @@ const Header = () => {
         <div className="fixed inset-0 bg-opacity-40 z-40" onClick={() => setOpenModal(false)}></div>
       )}
       {/* O'ng tomondan chiqadigan modal */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-gray-200 shadow-lg z-50 transform transition-transform duration-350 ${openModal ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`fixed top-0 right-0 h-full w-80 bg-[#ffffff] shadow-lg z-50 transform transition-transform duration-350 ${openModal ? "translate-x-0" : "translate-x-full"}`}>
         {/* Kontent */}
         {openModal && (
         <div className='max-w-[300px] h-[350px] py-4 pl-4 flex flex-col space-y-3'>
